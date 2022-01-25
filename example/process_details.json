@@ -1,0 +1,109 @@
+{
+  "cup_of_tea": {
+    "process": {
+      "kettle": {
+        "mugs": 0.5,
+        "fancy_mugs": 0.5,
+        "tea_stuff": 1,
+        "0_Fridge": 1
+      }
+    },
+    "frequency": 20
+  },
+  "coffee": {
+    "process": {
+      "kettle": {
+        "coffee_stuff": 1,
+        "mugs": 0.5,
+        "coffee_grinder": 0.5,
+        "4_Hob": 0.5,
+        "0_Fridge": 1,
+        "fancy_mugs": 0.5
+      }
+    },
+    "frequency": 10
+  },
+  "bready_goodness": {
+    "process": {
+      "breadbin": {
+        "toaster": 1,
+        "plates": 1,
+        "0_Fridge": 1,
+        "prep_area": 1
+      },
+      "prep_area": {
+        "dirty_pile": 1
+      }
+    },
+    "frequency": 5
+  },
+  "snacks": {
+    "process": {
+      "snacks": {
+        "dirty_pile": 1
+      }
+    },
+    "frequency": 10
+  },
+  "food_prep": {
+    "process": {
+      "prep_area": {
+        "0_Fridge": 1,
+        "oils_and_vinegars": 1,
+        "veg_dark": 0.3,
+        "veg_box": 0.3,
+        "asian_flavours": 0.05,
+        "flavours": 0.1,
+        "magimix": 0.1,
+        "common_spices": 1,
+        "uncommon_spices": 0.3,
+        "healthy_tat": 0.3,
+        "4_Hob": 1,
+        "plates": 1,
+        "alexs_fancy_stuff": 0.05
+      },
+      "magimix": {
+        "magimix_bits": 1
+      }
+    },
+    "frequency": 21
+  },
+  "baking": {
+    "process": {
+      "prep_area": {
+        "0_Fridge": 1,
+        "baking_supplies": 1,
+        "baking_dishes": 1,
+        "baking_ingredients": 1,
+        "4_Oven": 1,
+        "healthy_tat": 0.5,
+        "uncommon_spices": 0.3,
+        "common_spices": 1
+      }
+    },
+    "frequency": 1
+  },
+  "washing_up": {
+    "process": {
+      "dirty_pile": {
+        "7_Sink": 1
+      },
+      "7_Sink": {
+        "drying_rack": 1
+      }
+    },
+    "frequency": 21
+  },
+  "putting_away": {
+    "process": {
+      "drying_rack": {
+        "plates": 0.2,
+        "mugs": 0.2,
+        "fancy_mugs": 0.1,
+        "tuppaware": 0.2,
+        "baking_dishes": 0.1
+      }
+    },
+    "frequency": 21
+  }
+}

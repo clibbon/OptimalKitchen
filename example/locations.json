@@ -1,0 +1,371 @@
+{
+  "0_Fridge": {
+    "name": "0_Fridge",
+    "depth": null,
+    "width": null,
+    "height": null,
+    "is_surface": false,
+    "sockets": null,
+    "visibility": null
+  },
+  "4_Hob": {
+    "name": "4_Hob",
+    "depth": null,
+    "width": null,
+    "height": null,
+    "is_surface": false,
+    "sockets": null,
+    "visibility": null
+  },
+  "4_Oven": {
+    "name": "4_Oven",
+    "depth": null,
+    "width": null,
+    "height": null,
+    "is_surface": false,
+    "sockets": null,
+    "visibility": null
+  },
+  "7_Sink": {
+    "name": "7_Sink",
+    "depth": null,
+    "width": null,
+    "height": null,
+    "is_surface": false,
+    "sockets": null,
+    "visibility": null
+  },
+  "1_Side": {
+    "name": "1_Side",
+    "depth": 63,
+    "width": 40,
+    "height": 28,
+    "is_surface": true,
+    "sockets": 2,
+    "visibility": 1.0
+  },
+  "2_Side": {
+    "name": "2_Side",
+    "depth": 63,
+    "width": 44,
+    "height": 100,
+    "is_surface": true,
+    "sockets": 0,
+    "visibility": 1.0
+  },
+  "3_Side": {
+    "name": "3_Side",
+    "depth": 63,
+    "width": 60,
+    "height": 100,
+    "is_surface": true,
+    "sockets": 2,
+    "visibility": 1.0
+  },
+  "5_Side": {
+    "name": "5_Side",
+    "depth": 63,
+    "width": 60,
+    "height": 100,
+    "is_surface": true,
+    "sockets": 2,
+    "visibility": 1.0
+  },
+  "6_Side": {
+    "name": "6_Side",
+    "depth": 63,
+    "width": 60,
+    "height": 100,
+    "is_surface": true,
+    "sockets": 2,
+    "visibility": 1.0
+  },
+  "8_Side": {
+    "name": "8_Side",
+    "depth": 63,
+    "width": 40,
+    "height": 100,
+    "is_surface": true,
+    "sockets": 0,
+    "visibility": 1.0
+  },
+  "9_Side": {
+    "name": "9_Side",
+    "depth": 63,
+    "width": 40,
+    "height": 100,
+    "is_surface": true,
+    "sockets": 0,
+    "visibility": 1.0
+  },
+  "10_Foldy": {
+    "name": "10_Foldy",
+    "depth": 38,
+    "width": 78,
+    "height": 100,
+    "is_surface": true,
+    "sockets": 0,
+    "visibility": 1.0
+  },
+  "1_Side_drawer_top": {
+    "name": "1_Side_drawer_top",
+    "depth": 55,
+    "width": 40,
+    "height": 20,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "1_Side_drawer_mid": {
+    "name": "1_Side_drawer_mid",
+    "depth": 55,
+    "width": 40,
+    "height": 20,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "1_Side_drawer_bot": {
+    "name": "1_Side_drawer_bot",
+    "depth": 55,
+    "width": 40,
+    "height": 40,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "5_Side_drawer_top": {
+    "name": "5_Side_drawer_top",
+    "depth": 55,
+    "width": 40,
+    "height": 10,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "5_Side_drawer_mid_top": {
+    "name": "5_Side_drawer_mid_top",
+    "depth": 55,
+    "width": 40,
+    "height": 10,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+   "5_Side_drawer_mid_bot": {
+    "name": "5_Side_drawer_mid_bot",
+    "depth": 55,
+    "width": 40,
+    "height": 20,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "5_Side_drawer_bot": {
+    "name": "5_Side_drawer_bot",
+    "depth": 55,
+    "width": 40,
+    "height": 40,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "2_Side_corner_top": {
+    "name": "2_Side_corner_top",
+    "depth": 55,
+    "width": 100,
+    "height": 25,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.7
+  },
+  "2_Side_corner_mid": {
+    "name": "2_Side_corner_mid",
+    "depth": 55,
+    "width": 100,
+    "height": 15,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.7
+  },
+  "2_Side_drawer_bot_front": {
+    "name": "2_Side_drawer_bot_front",
+    "depth": 55,
+    "width": 60,
+    "height": 23,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.5
+  },
+  "2_Side_drawer_bot_back": {
+    "name": "2_Side_drawer_bot_back",
+    "depth": 55,
+    "width": 60,
+    "height": 23,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.0
+  },
+  "3_Cupboard_bot": {
+    "name": "3_Cupboard_bot",
+    "depth": 35,
+    "width": 60,
+    "height": 33,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.5
+  },
+  "3_Cupboard_mid": {
+    "name": "3_Cupboard_mid",
+    "depth": 35,
+    "width": 60,
+    "height": 12,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.3
+  },
+  "3_Cupboard_top": {
+    "name": "3_Cupboard_top",
+    "depth": 35,
+    "width": 60,
+    "height": 26,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0
+  },
+  "5_Cupboard_bot": {
+    "name": "5_Cupboard_bot",
+    "depth": 35,
+    "width": 60,
+    "height": 23,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.5
+  },
+  "5_Cupboard_mid": {
+    "name": "5_Cupboard_mid",
+    "depth": 35,
+    "width": 60,
+    "height": 23,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.3
+  },
+  "5_Cupboard_top": {
+    "name": "5_Cupboard_top",
+    "depth": 35,
+    "width": 60,
+    "height": 27,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0
+  },
+  "6_Cupboard_bot": {
+    "name": "6_Cupboard_bot",
+    "depth": 35,
+    "width": 60,
+    "height": 23,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.5
+  },
+  "6_Cupboard_mid": {
+    "name": "6_Cupboard_mid",
+    "depth": 35,
+    "width": 60,
+    "height": 23,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.3
+  },
+  "6_Cupboard_top": {
+    "name": "6_Cupboard_top",
+    "depth": 35,
+    "width": 60,
+    "height": 27,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0
+  },
+  "4_Cupboard_bot": {
+    "name": "4_Cupboard_bot",
+    "depth": 25,
+    "width": 60,
+    "height": 30,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.5
+  },
+  "4_Cupboard_top": {
+    "name": "4_Cupboard_top",
+    "depth": 25,
+    "width": 60,
+    "height": 32,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.1
+  },
+  "10_Foldy_bot": {
+    "name": "10_Foldy_bot",
+    "depth": 38,
+    "width": 70,
+    "height": 15,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.3
+  },
+  "10_Foldy_mid": {
+    "name": "10_Foldy_mid",
+    "depth": 38,
+    "width": 70,
+    "height": 30,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.5
+  },
+  "1_Freeshelves_mid": {
+    "name": "1_Freeshelves_mid",
+    "depth": 38,
+    "width": 53,
+    "height": 20,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "1_Freeshelves_top": {
+    "name": "1_Freeshelves_top",
+    "depth": 38,
+    "width": 53,
+    "height": 100,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.8
+  },
+  "7_Sink_corner_top_back": {
+    "name": "7_Sink_corner_top_back",
+    "depth": 60,
+    "width": 60,
+    "height": 36,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.0
+  },
+  "7_Sink_corner_bot_back": {
+    "name": "7_Sink_corner_bot_back",
+    "depth": 60,
+    "width": 60,
+    "height": 40,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.0
+  },
+  "7_Sink_corner_bot_front": {
+    "name": "7_Sink_corner_bot_front",
+    "depth": 60,
+    "width": 60,
+    "height": 100,
+    "is_surface": false,
+    "sockets": 0,
+    "visibility": 0.4
+  }
+}

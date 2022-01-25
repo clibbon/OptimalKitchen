@@ -1,0 +1,372 @@
+{
+  "magimix": {
+    "name": "magimix",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 12,
+    "depth": 12,
+    "height": 12,
+    "is_solid": true,
+    "visibility_need": 0
+  },
+  "magimix_bits": {
+    "name": "magimix_bits",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 12,
+    "depth": 12,
+    "height": 12,
+    "is_solid": true,
+    "visibility_need": 0
+  },
+  "fruit_bowl": {
+    "name": "fruit_bowl",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 10,
+    "depth": 10,
+    "height": 10,
+    "is_solid": true,
+    "visibility_need": 1
+  },
+  "veg_box": {
+    "name": "veg_box",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 15,
+    "depth": 15,
+    "height": 15,
+    "is_solid": true,
+    "visibility_need": 0
+  },
+  "common_spices": {
+    "name": "common_spices",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 20,
+    "height": 12,
+    "is_solid": false,
+    "visibility_need": 1
+  },
+  "breadbin": {
+    "name": "breadbin",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 20,
+    "height": 30,
+    "is_solid": true,
+    "visibility_need": 0
+  },
+  "ferments": {
+    "name": "ferments",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 20,
+    "height": 30,
+    "is_solid": false,
+    "visibility_need": 0.8
+  },
+  "drying_rack": {
+    "name": "drying_rack",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 60,
+    "depth": 60,
+    "height": 70,
+    "is_solid": true,
+    "visibility_need": null
+  },
+  "dirty_pile": {
+    "name": "dirty_pile",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 60,
+    "depth": 60,
+    "height": 100,
+    "is_solid": false,
+    "visibility_need": null
+  },
+  "prep_area": {
+    "name": "prep_area",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 50,
+    "depth": 50,
+    "height": 100,
+    "is_solid": false,
+    "visibility_need": null
+  },
+  "toaster": {
+    "name": "toaster",
+    "needs_surface": true,
+    "needs_socket": true,
+    "width": 30,
+    "depth": 30,
+    "height": 30,
+    "is_solid": true,
+    "visibility_need": null
+  },
+  "kettle": {
+    "name": "kettle",
+    "needs_surface": true,
+    "needs_socket": true,
+    "width": 30,
+    "depth": 30,
+    "height": 30,
+    "is_solid": true,
+    "visibility_need": null
+  },
+  "coffee_stuff": {
+    "name": "coffee_stuff",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 50,
+    "depth": 30,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 1
+  },
+  "tea_stuff": {
+    "name": "tea_stuff",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 60,
+    "depth": 30,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 1
+  },
+  "nice_mugs": {
+    "name": "nice_mugs",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 60,
+    "depth": 50,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 1
+  },
+  "veg_dark": {
+    "name": "veg_dark",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 40,
+    "depth": 40,
+    "height": 30,
+    "is_solid": false,
+    "visibility_need": 0
+  },
+  "tuppaware": {
+    "name": "tuppaware",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 40,
+    "depth": 50,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.8
+  },
+  "coffee_grinder": {
+    "name": "coffee_grinder",
+    "needs_surface": false,
+    "needs_socket": true,
+    "width": 15,
+    "depth": 15,
+    "height": 20,
+    "is_solid": true,
+    "visibility_need": 0.7
+  },
+  "fancy_glasses": {
+    "name": "fancy_glasses",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 50,
+    "depth": 30,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.7
+  },
+  "mugs": {
+    "name": "mugs",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 40,
+    "depth": 40,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.7
+  },
+  "fancy_mugs": {
+    "name": "fancy_mugs",
+    "needs_surface": true,
+    "needs_socket": false,
+    "width": 40,
+    "depth": 30,
+    "height": 15,
+    "is_solid": false,
+    "visibility_need": 0.8
+  },
+  "glasses": {
+    "name": "glasses",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 30,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.8
+  },
+  "wine_glasses": {
+    "name": "wine_glasses",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 30,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.7
+  },
+  "alexs_cookware": {
+    "name": "alexs_cookware",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 30,
+    "height": 15,
+    "is_solid": true,
+    "visibility_need": 0.3
+  },
+  "pulses_carbs": {
+    "name": "pulses_carbs",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 30,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.6
+  },
+  "healthy_tat": {
+    "name": "healthy_tat",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 30,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.6
+  },
+  "flavours": {
+    "name": "flavours",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 50,
+    "depth": 40,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.6
+  },
+  "mail": {
+    "name": "mail",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 30,
+    "height": 20,
+    "is_solid": true,
+    "visibility_need": 0.2
+  },
+  "bags": {
+    "name": "bags",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 30,
+    "height": 30,
+    "is_solid": true,
+    "visibility_need": 0.2
+  },
+  "snacks": {
+    "name": "snacks",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 30,
+    "depth": 30,
+    "height": 15,
+    "is_solid": true,
+    "visibility_need": 0.6
+  },
+  "asian_stuff": {
+    "name": "asian_stuff",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 20,
+    "height": 15,
+    "is_solid": true,
+    "visibility_need": 0.6
+  },
+  "baking supplies": {
+    "name": "baking supplies",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 20,
+    "height": 25,
+    "is_solid": false,
+    "visibility_need": 0.5
+  },
+  "baking_dishes": {
+    "name": "baking_dishes",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 50,
+    "depth": 50,
+    "height": 20,
+    "is_solid": false,
+    "visibility_need": 0.4
+  },
+  "oils_and_vinegars": {
+    "name": "oils_and_vinegars",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 30,
+    "height": 25,
+    "is_solid": false,
+    "visibility_need": 0.7
+  },
+  "uncommon_spices": {
+    "name": "uncommon_spices",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 20,
+    "height": 15,
+    "is_solid": false,
+    "visibility_need": 0.8
+  },
+  "baking_ingredients": {
+    "name": "baking_ingredients",
+    "needs_surface": false,
+    "needs_socket": false,
+    "width": 20,
+    "depth": 20,
+    "height": 25,
+    "is_solid": false,
+    "visibility_need": 0.8
+  },
+  "saute_and_soup": {
+    "name": "saute_and_soup",
+    "needs_surface": false,
+    "needs_socket": true,
+    "width": 20,
+    "depth": 20,
+    "height": 30,
+    "is_solid": true,
+    "visibility_need": 0.2
+  }
+}

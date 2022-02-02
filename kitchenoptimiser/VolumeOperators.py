@@ -1,6 +1,6 @@
 import random
 
-from operations import Operator
+from .operations import Operator
 from .io import Thing, Place
 
 
@@ -90,6 +90,35 @@ def get_thing_place_dict(places: list[FillablePlace]):
     return thing_place_dict
 
 
+def place_specifically(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_keep):
+    for thing in things_to_keep:
+        for place in child_1:
+            if place.name == ind_1_thing_place_dict[thing]:
+                place.add(thing)
+                break
+
+        for place in child_2:
+            if place.name == ind_2_thing_place_dict[thing]:
+                place.add(thing)
+                break
+
+
+def swap_places(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_swap):
+    for thing in things_to_swap:
+        for place in child_1:
+            right_place = place.name == ind_2_thing_place_dict[thing]
+            if right_place:
+                if place.can_fit(thing):
+                    place.add(thing)
+                break
+
+        for place in child_2:
+            right_place = place.name == ind_1_thing_place_dict[thing]
+            if right_place:
+                if place.can_fit(thing):
+                    place.add(thing)
+                break
+
 
 class VolumeOperator(Operator):
     """An operator designed to work with things and places which have full dimensions (width, height, depth)"""
@@ -120,16 +149,26 @@ class VolumeOperator(Operator):
         pack_random(unassigned_things, individual.places)
 
     def mate(self, ind_1, ind_2):
-        things_to_swap = [thing for thing in self.assignable_things if random.random() < self.swap_chance]
+        things_to_swap = set(thing for thing in self.assignable_things if random.random() < self.swap_chance)
 
         ind_1_thing_place_dict = get_thing_place_dict(ind_1.places)
         ind_2_thing_place_dict = get_thing_place_dict(ind_2.places)
-        places_1 = sorted(ind_1.places, key=lambda x: x.name)
-        places_2 = sorted(ind_2.places, key=lambda x: x.name)
-        for place_1, place_2 in zip(places_1, pl)
+
+        things_to_keep = [thing for thing in self.assignable_things if thing not in things_to_swap]
+
+        child_1 = [FillablePlace(place) for place in self.assignable_places]
+        child_2 = [FillablePlace(place) for place in self.assignable_places]
+
+        place_specifically(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_keep)
+
+        # Now try to swap the things to swap - this feels nasty
+        swap_places(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_swap)
+
+        return child_1, child_2
+
 
 def pack_random(things, places):
-    """Randomly puut things in places. Modifies places"""
+    """Randomly put things in places. Modifies places"""
     for thing in things:
         random.shuffle(places)
         for place in places:

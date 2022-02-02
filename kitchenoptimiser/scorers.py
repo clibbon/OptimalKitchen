@@ -2,7 +2,7 @@ from collections import defaultdict
 
 import networkx as nx
 
-from .io import Location
+from .io import Place
 
 
 class DistanceScorer:
@@ -67,7 +67,7 @@ def pre_calc_distances(layout: nx.Graph, weight: str = 'weight'):
 
 
 class VisibilityScorer:
-    def __init__(self, location_info: dict[str: Location], not_surface_penalty=10, no_sockets_penalty=5):
+    def __init__(self, location_info: dict[str: Place], not_surface_penalty=10, no_sockets_penalty=5):
         self.location_info = location_info
         self.not_surface_penalty = not_surface_penalty
         self.no_sockets_penalty = no_sockets_penalty

@@ -1,9 +1,7 @@
-import abc
-from collections import defaultdict
-from functools import reduce
 import random
-import numpy as np
 from abc import ABC, abstractmethod
+
+import numpy as np
 
 
 class Operator(ABC):
@@ -30,6 +28,9 @@ class SetOperator(Operator):
         self.all_things = all_things
         self.all_locations = all_locations
         self.fixed_assignments = fixed_assignments
+
+        # Precalculate a few things
+        self.size_possiblethings_dict = {}  # TODO Fill out
         self.smallest_thing = get_smallest_thing(all_things)
 
         self.assignable_things = set(all_things.keys()).difference(set(fixed_assignments.keys()))
@@ -68,18 +69,17 @@ class SetOperator(Operator):
         return individual,
 
     def mate(self, ind_1, ind_2) -> tuple[dict, dict]:
-
-
+        pass
 
     def assign_things(self, gene: dict, locations, things) -> None:
         for location in locations:
             available_space = 1.  # Starts off empty
 
             while available_space >= self.smallest_thing:
-                available_sizes = size_possiblethings_dict.keys()
+                available_sizes = self.size_possiblethings_dict.keys()
                 largest_size = max(size for size in available_sizes if size <= available_space)
 
-                candidate_things = things.intersection(size_possiblethings_dict[largest_size])
+                candidate_things = things.intersection(self.size_possiblethings_dict[largest_size])
 
                 if len(candidate_things) == 0:
                     if location not in gene:

@@ -20,7 +20,7 @@ class Thing:
 
 
 @dataclass
-class Location:
+class Place:
     """Dataclass for kitchen locations"""
     name: str
     height: float  # Height in cm
@@ -51,21 +51,21 @@ def read_things(path) -> dict[str: Thing]:
     return things
 
 
-def read_locations(path) -> dict[str: Location]:
+def read_locations(path) -> dict[str: Place]:
     locations = {}
 
     with open(path, 'r') as f:
         name_details_dict = json.load(f)
 
     for _, details in name_details_dict.items():
-        locations[details['name']] = Location(name=details['name'],
-                                              height=details['height'],
-                                              depth=details['depth'],
-                                              width=details['width'],
-                                              is_surface=details['is_surface'],
-                                              sockets=details['sockets'],
-                                              visibility=details['visibility']
-                                              )
+        locations[details['name']] = Place(name=details['name'],
+                                           height=details['height'],
+                                           depth=details['depth'],
+                                           width=details['width'],
+                                           is_surface=details['is_surface'],
+                                           sockets=details['sockets'],
+                                           visibility=details['visibility']
+                                           )
     return locations
 
 

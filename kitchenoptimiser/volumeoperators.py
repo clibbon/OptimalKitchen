@@ -88,15 +88,19 @@ def get_place_things_dict(places: list[FillablePlace]):
     return place_thing_dict
 
 
-def place_specifically(source, location_dict, things):
+def place_specifically(source, location_dict, things, strict=False):
     """Puts the provided things in the same place in target as they are in source. Ignores things that aren't in
     source"""
     for thing in things:
         if thing.name not in location_dict:
             continue
+
         for place in source:
             if place.name == location_dict[thing.name]:
-                place.add(thing)
+                if place.can_fit(thing):
+                    place.add(thing)
+                elif strict:
+                    raise AssertionError(f"Can't fit {thing} in {place}")
                 break
 
 
@@ -158,11 +162,12 @@ class VolumeOperator(Operator):
         child_1 = [FillablePlace(place) for place in self.assignable_places]
         child_2 = [FillablePlace(place) for place in self.assignable_places]
 
-        place_specifically(child_1, ind_1_thing_place_dict, things_to_keep)
-        place_specifically(child_2, ind_2_thing_place_dict, things_to_keep)
+        place_specifically(child_1, ind_1_thing_place_dict, things_to_keep, strict=True)
+        place_specifically(child_2, ind_2_thing_place_dict, things_to_keep, strict=True)
 
-        # Now try to swap the things to swap - this feels nasty
-        swap_places(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_swap)
+        # Now try to swap the things to swap
+        place_specifically(child_1, ind_2_thing_place_dict, things_to_swap, strict=False)
+        place_specifically(child_2, ind_1_thing_place_dict, things_to_swap, strict=False)
 
         return child_1, child_2
 

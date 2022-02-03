@@ -75,30 +75,27 @@ class FillablePlace:
 
     def pop(self) -> Thing:
         """Pop a random thing out"""
-        if not self.is_empty():
+        if self.is_empty():
             raise AssertionError("Place is already empty")
 
         random_idx = random.choice(range(len(self.contents)))
         return self.contents.pop(random_idx)
 
 
-def get_thing_place_dict(places: list[FillablePlace]):
-    thing_place_dict = {}
-    for place in places:
-        for thing in place.contents:
-            thing_place_dict[thing.name] = place.name
-    return thing_place_dict
+def get_place_things_dict(places: list[FillablePlace]):
+    place_thing_dict = {place.name: set(thing.name for thing in place.contents)
+                        for place in places}
+    return place_thing_dict
 
 
-def place_specifically(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_keep):
-    for thing in things_to_keep:
-        for place in child_1:
-            if place.name == ind_1_thing_place_dict[thing]:
-                place.add(thing)
-                break
-
-        for place in child_2:
-            if place.name == ind_2_thing_place_dict[thing]:
+def place_specifically(source, location_dict, things):
+    """Puts the provided things in the same place in target as they are in source. Ignores things that aren't in
+    source"""
+    for thing in things:
+        if thing.name not in location_dict:
+            continue
+        for place in source:
+            if place.name == location_dict[thing.name]:
                 place.add(thing)
                 break
 
@@ -123,13 +120,15 @@ def swap_places(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict
 class VolumeOperator(Operator):
     """An operator designed to work with things and places which have full dimensions (width, height, depth)"""
 
-    def __init__(self, all_things: list[Thing], all_places: list[Place], fixed_assignments: dict, swap_chance):
+    def __init__(self, all_things: dict[str, Thing], all_places: dict[str, Place], fixed_assignments: dict, swap_chance):
         self.all_things = all_things
         self.all_places = all_places
         self.fixed_assignments = fixed_assignments
 
-        self.assignable_things = list(thing for thing in all_things if thing.name not in fixed_assignments.keys())
-        self.assignable_places = list(place for place in all_places if place not in fixed_assignments.values())
+        self.assignable_things = list(thing for thing in all_things.values()
+                                      if thing.name not in fixed_assignments.keys())
+        self.assignable_places = list(place for place in all_places.values()
+                                      if place.name not in fixed_assignments.values())
 
         self.swap_chance = swap_chance
 
@@ -141,30 +140,42 @@ class VolumeOperator(Operator):
 
     def mutate(self, individual) -> None:
         unassigned_things = []
-        for place in individual.places:
-            if random.random() < self.swap_chance:
+        for place in individual:
+            should_swap = random.random() < self.swap_chance
+            if should_swap and not place.is_empty():
                 unassigned_things.append(place.pop())
 
-        del individual.fitness  # Part of DEAP
-        pack_random(unassigned_things, individual.places)
+        pack_random(unassigned_things, individual)
 
     def mate(self, ind_1, ind_2):
-        things_to_swap = set(thing for thing in self.assignable_things if random.random() < self.swap_chance)
+        things_to_swap = [thing for thing in self.assignable_things if random.random() < self.swap_chance]
 
-        ind_1_thing_place_dict = get_thing_place_dict(ind_1.places)
-        ind_2_thing_place_dict = get_thing_place_dict(ind_2.places)
+        ind_1_thing_place_dict = self.get_thing_place_dict(ind_1, include_fixed=False)
+        ind_2_thing_place_dict = self.get_thing_place_dict(ind_2, include_fixed=False)
 
         things_to_keep = [thing for thing in self.assignable_things if thing not in things_to_swap]
 
         child_1 = [FillablePlace(place) for place in self.assignable_places]
         child_2 = [FillablePlace(place) for place in self.assignable_places]
 
-        place_specifically(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_keep)
+        place_specifically(child_1, ind_1_thing_place_dict, things_to_keep)
+        place_specifically(child_2, ind_2_thing_place_dict, things_to_keep)
 
         # Now try to swap the things to swap - this feels nasty
         swap_places(child_1, child_2, ind_1_thing_place_dict, ind_2_thing_place_dict, things_to_swap)
 
         return child_1, child_2
+
+    def get_thing_place_dict(self, places: list[FillablePlace], include_fixed):
+        thing_place_dict = {}
+        for place in places:
+            for thing in place.contents:
+                thing_place_dict[thing.name] = place.name
+
+        if include_fixed:
+            thing_place_dict.update(self.fixed_assignments)
+
+        return thing_place_dict
 
 
 def pack_random(things, places):
